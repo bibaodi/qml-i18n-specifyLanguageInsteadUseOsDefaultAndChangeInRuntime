@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
     bool ret = app.installTranslator(&translator);
     qDebug() << translator.language() << ",installTranslator=" << ret;
   }
-  if (translator.load("qml_en_AU.qm")) {
+  if (translator.load("qml_en.qm")) {
     bool ret = app.installTranslator(&translator);
     qDebug() << translator.language() << ",installTranslator=" << ret;
   }

@@ -22,16 +22,16 @@ Window {
 
         Text {
             //% "text-ID-based for id-Hello"
-            text: qsTr("Hello")
+            text: qsTrId("Hello")
             font.pointSize: 25
             anchors.horizontalCenter: parent.horizontalCenter
         }
 
         Button {
             //% "text-ID-based for id-English"
-            text: qsTr("English")
+            text: qsTrId("English")
             onClicked: {
-                languageManager.changeLanguage("en_US", "qml_en_AU.qm")
+                languageManager.changeLanguage("en_US", "qml_en.qm")
             }
         }
 

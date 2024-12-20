@@ -38,13 +38,21 @@ set(TRANSLATION_SOURCES qml-i18n.qml qml-i18n.qrc)
 #qt6_add_lupdate(qmli18n SOURCES ${TRANSLATION_SOURCES}
 #    TS_FILES qmli18n_base.ts NO_GLOBAL_TARGET)
 
+# this start from qt6.7
+#qt_collect_translation_source_targets(i18n_targets)
+#qt_add_lupdate(SOURCE_TARGETS ${i18n_targets})
+
 qt_add_translations(qmli18n
     TS_FILES
     i18n/base.ts
     i18n/qml_en.ts
     i18n/qml_en_AU.ts
     i18n/qml_fr.ts
-    QM_FILES_OUTPUT_VARIABLE qmQM_files
+    RESOURCE_PREFIX i18n/
+    #QM_FILES_OUTPUT_VARIABLE qmQM_files
+    INCLUDE_DIRECTORIES ${CMAKE_CURRENT_SOURCE_DIR}
+    LUPDATE_OPTIONS -no-obsolete
+    LRELEASE_OPTIONS -idbased #this line is necessary for text-id-based, and .ts should describe in text-id-based also --eton@241220
 )
 
 # qt_add_translations(qmli18n

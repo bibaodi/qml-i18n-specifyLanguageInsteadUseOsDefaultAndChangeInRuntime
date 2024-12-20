@@ -3,10 +3,21 @@
 <TS version="2.1" language="fr" sourcelanguage="en">
 <context>
     <name>qml-i18n</name>
-    <message>
-        <location filename="../qml-i18n.qml" line="68"/>
-        <source>Hello</source>
-        <translation>Bonjour</translation>
+    <message id="Hello">
+        <location filename="../qml-i18n.qml" line="25"/>
+        <source>text-ID-based for id-Hello</source>
+	<translation>Bonjour</translation>
     </message>
+    <message id="English">
+        <location filename="../qml-i18n.qml" line="32"/>
+        <source>text-ID-based for id-English</source>
+	<translation>Bonjour-2</translation>
+    </message>
+    <message id="id-French">
+        <location filename="../qml-i18n.qml" line="40"/>
+        <source>text-ID-based for id-French</source>
+	<translation>Bonjour-3</translation>
+    </message>
+
 </context>
 </TS>

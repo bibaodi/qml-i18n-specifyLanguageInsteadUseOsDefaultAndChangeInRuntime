@@ -10,3 +10,15 @@
 ## Env:
 - Debian12;
 - Qt6.5; 
+
+## generate translations
+### 1. generate TS files
+```sh
+cd i18n && lupdate ../qml-i18n.qrc -ts qml_en.ts
+```
+
+### 2. confirm translations
+this will make 'unfinished' to finished.
+```sh
+linguist qml_en.ts
+```
