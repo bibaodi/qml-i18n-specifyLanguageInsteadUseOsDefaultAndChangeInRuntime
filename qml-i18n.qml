@@ -21,12 +21,14 @@ Window {
         }
 
         Text {
+            //% "text-ID-based for id-Hello"
             text: qsTr("Hello")
             font.pointSize: 25
             anchors.horizontalCenter: parent.horizontalCenter
         }
 
         Button {
+            //% "text-ID-based for id-English"
             text: qsTr("English")
             onClicked: {
                 languageManager.changeLanguage("en_US", "qml_en_AU.qm")
@@ -34,7 +36,8 @@ Window {
         }
 
         Button {
-            text: qsTr("French")
+            //% "text-ID-based for id-French"
+            text: qsTrId("id-French")
             onClicked: {
                 languageManager.changeLanguage("fr_FR", "qml_fr.qm")
             }
